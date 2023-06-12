@@ -16,8 +16,6 @@ const Dashboard = () => {
   const [isAdmin] = useAdmin();
   const [isInsta] = useInsta();
 
-  // const isAdmin = true;
-
   return (
     <div className="drawer drawer-mobile ">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
