@@ -7,7 +7,6 @@ import "./CheckoutForm.css";
 import Swal from "sweetalert2";
 
 const CheckoutForm = ({ cart, price }) => {
- 
   const stripe = useStripe();
   const elements = useElements();
   const { user } = useAuth();
@@ -20,7 +19,6 @@ const CheckoutForm = ({ cart, price }) => {
   useEffect(() => {
     if (price > 0) {
       axiosSecure.post("/create-payment-intent", { price }).then((res) => {
-        //console.log(res.data.clientSecret);
         setClientSecret(res.data.clientSecret);
       });
     }
@@ -45,7 +43,6 @@ const CheckoutForm = ({ cart, price }) => {
       setCardError(error.message);
     } else {
       setCardError("");
-      // console.log('payment method', paymentMethod)
     }
 
     setProcessing(true);
@@ -84,14 +81,13 @@ const CheckoutForm = ({ cart, price }) => {
       axiosSecure.post("/payments", payment).then((res) => {
         console.log(res.data);
         if (res.data.insertResult.insertedId) {
-          //console.log(res.data.result.insertedId);
-              Swal.fire({
-                position: "top-end",
-                icon: "success",
-                title: "Payment successfull",
-                showConfirmButton: false,
-                timer: 1500,
-              });
+          Swal.fire({
+            position: "top-end",
+            icon: "success",
+            title: "Payment successfull",
+            showConfirmButton: false,
+            timer: 1500,
+          });
         }
       });
     }
