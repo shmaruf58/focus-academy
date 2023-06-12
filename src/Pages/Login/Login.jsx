@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-
 import { AuthContext } from "../../providers/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -10,10 +9,8 @@ import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 const Login = () => {
   const [show, setShow] = useState(false);
   const { signIn } = useContext(AuthContext);
-
   const navigate = useNavigate();
   const location = useLocation();
-
   const from = location.state?.from?.pathname || "/";
 
   const handleLogin = (event) => {

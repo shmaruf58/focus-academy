@@ -4,9 +4,7 @@ import Category from "./Category/Category";
 import Classes from "./Classes/Classes";
 import Insta from "./Insta/Insta";
 
-
 const Home = () => {
-
   return (
     <div>
       <Helmet>

@@ -22,6 +22,7 @@ import MainClass from "../Compo/MainClass";
 import MainInsta from "../Compo/MainInsta";
 import PaymentHistory from "../Pages/Dashboard/PaymentHistory/PaymentHistory";
 import Enrol from "../Pages/Dashboard/Enrol.jsx/Enrol";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -70,7 +71,7 @@ export const router = createBrowserRouter([
   // dashboard route
   {
     path: 'dashboard',
-    element: <Dashboard></Dashboard>, 
+    element: <PrivateRoute> <Dashboard></Dashboard></PrivateRoute>, 
     children: [
 
       // User Route

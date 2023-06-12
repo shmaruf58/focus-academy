@@ -9,7 +9,6 @@ import SocialLogin from "../Shared/SocialLogin/SocialLogin";
 
 const SignUp = () => {
   
-  
   const {
     register,
     handleSubmit,

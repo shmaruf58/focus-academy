@@ -53,13 +53,12 @@ const AuthProvider = ({ children }) => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       console.log("current user", currentUser);
-
-      // get and set token
       if (currentUser) {
         axios
-          .post("https://twin-server.vercel.app/jwt", { email: currentUser.email })
+          .post("https://twin-server.vercel.app/jwt", {
+            email: currentUser.email,
+          })
           .then((data) => {
-            // console.log(data.data.token)
             localStorage.setItem("access-token", data.data.token);
             setLoading(false);
           });

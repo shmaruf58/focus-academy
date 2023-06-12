@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-
 import LazyLoad from "react-lazy-load";
 import { Slide } from "react-awesome-reveal";
 import Swal from "sweetalert2";
@@ -88,11 +87,11 @@ const Classes = () => {
           <div
             key={service?._id}
             className={`card card-compact w-96 ${
-              service.available_seats === 0 ? 'bg-red-600' : 'bg-base-100'
+              service.available_seats === 0 ? "bg-red-600" : "bg-base-100"
             } shadow-xl`}
           >
             <figure>
-              <LazyLoad >
+              <LazyLoad>
                 <img className=" w-full h-64" src={service.img} alt="Movie" />
               </LazyLoad>
             </figure>
@@ -104,7 +103,6 @@ const Classes = () => {
               </p>
               <p className="font-semibold">Price: ${service.price}</p>
               <div className="card-actions justify-end">
-
                 {isInsta && !isAdmin ? (
                   <>
                     <button
@@ -145,7 +143,6 @@ const Classes = () => {
                     </button>
                   </>
                 )}
-
               </div>
             </div>
           </div>
