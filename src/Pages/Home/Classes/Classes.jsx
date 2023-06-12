@@ -33,7 +33,7 @@ const Classes = () => {
         email: user.email,
       };
 
-      fetch("http://localhost:5000/carts", {
+      fetch("https://twin-server.vercel.app/carts", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -70,7 +70,7 @@ const Classes = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/classes")
+    fetch("https://twin-server.vercel.app/classes")
       .then((response) => response.json())
       .then((data) => setService(data));
   }, []);

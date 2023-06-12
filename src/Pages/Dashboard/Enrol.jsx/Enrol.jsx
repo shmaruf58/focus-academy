@@ -8,7 +8,7 @@ const Enrol = () => {
     const { user } = useContext(AuthContext);
   
     useEffect(() => {
-      fetch("http://localhost:5000/payments")
+      fetch("https://twin-server.vercel.app/payments")
         .then((response) => response.json())
         .then((data) => setService(data));
     }, []);

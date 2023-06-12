@@ -4,6 +4,7 @@ import { useState } from "react";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import useAuth from "../../../hooks/useAuth";
 import "./CheckoutForm.css";
+import Swal from "sweetalert2";
 
 const CheckoutForm = ({ cart, price }) => {
  
@@ -82,8 +83,15 @@ const CheckoutForm = ({ cart, price }) => {
       };
       axiosSecure.post("/payments", payment).then((res) => {
         console.log(res.data);
-        if (res.data.result.insertedId) {
-          // display confirm
+        if (res.data.insertResult.insertedId) {
+          //console.log(res.data.result.insertedId);
+              Swal.fire({
+                position: "top-end",
+                icon: "success",
+                title: "Payment successfull",
+                showConfirmButton: false,
+                timer: 1500,
+              });
         }
       });
     }

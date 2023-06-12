@@ -2,6 +2,7 @@ import { FaTrashAlt } from "react-icons/fa";
 import useMenu from "../../../hooks/useMenu";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import { Helmet } from "react-helmet-async";
 
 const ManageItems = () => {
   const [menu, , refetch] = useMenu();
@@ -31,6 +32,9 @@ const ManageItems = () => {
 
   return (
     <div className="w-full p-5 overflow-scroll overflow-x-scroll">
+      <Helmet>
+        <title>Focus Academy | Manage All Classes</title>
+      </Helmet>
       <h1 className="text-5xl font-bold text-center py-10">
         Manage All Classes
       </h1>

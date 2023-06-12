@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
+import { Helmet } from "react-helmet-async";
 
 //
 //
@@ -58,6 +59,9 @@ const AddItem = () => {
 
   return (
     <div className="w-full px-10">
+      <Helmet>
+        <title>Focus Academy | Add A Class</title>
+      </Helmet>
       <h1 className="text-5xl font-bold text-center">Add Classes</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-control w-full mb-4">

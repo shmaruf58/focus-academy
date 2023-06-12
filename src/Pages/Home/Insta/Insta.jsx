@@ -6,7 +6,7 @@ const  Insta = () => {
   const [services, setService] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/instructor")
+    fetch("https://twin-server.vercel.app/instructor")
       .then((response) => response.json())
       .then((data) => setService(data));
   }, []);

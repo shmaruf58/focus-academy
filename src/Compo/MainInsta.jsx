@@ -19,6 +19,9 @@ const MainInsta = () => {
 
   return (
     <div className="w-full p-5">
+       <Helmet>
+        <title>Focus Academy | All Instructor</title>
+      </Helmet>
       <h1 className="text-5xl font-bold text-center py-10 mt-20">All Instructor</h1>
       {/*  */}
 

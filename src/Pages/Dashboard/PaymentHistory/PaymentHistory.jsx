@@ -10,7 +10,7 @@ const PaymentHistory = () => {
   const { user } = useContext(AuthContext);
 
   useEffect(() => {
-    fetch("http://localhost:5000/payments")
+    fetch("https://twin-server.vercel.app/payments")
       .then((response) => response.json())
       .then((data) => setService(data));
   }, []);
@@ -18,7 +18,7 @@ const PaymentHistory = () => {
   return (
     <div className="w-full px-10">
          <Helmet>
-        <title>Focus Academy | Payment History</title>
+          <title>Focus Academy | Payment History</title>
       </Helmet>
     <h1 className="text-4xl font-bold text-center py-5 ">Payment History</h1>
       <div className="overflow-x-auto w-full">

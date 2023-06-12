@@ -7,6 +7,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import useCart from "../hooks/useCart";
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const MainClass = () => {
   const [menu] = useMenu();
@@ -32,7 +33,7 @@ const MainClass = () => {
         email: user.email,
       };
 
-      fetch("http://localhost:5000/carts", {
+      fetch("https://twin-server.vercel.app/carts", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -70,6 +71,9 @@ const MainClass = () => {
 
   return (
     <div className="w-full p-5">
+       <Helmet>
+        <title>Focus Academy | All Classes</title>
+      </Helmet>
       <h1 className="text-5xl font-bold text-center py-10 mt-20">All Classes</h1>
       {/*  */}
 

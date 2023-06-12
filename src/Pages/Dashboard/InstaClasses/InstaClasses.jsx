@@ -35,8 +35,10 @@ const InstaClasses = () => {
 
   return (
     <div className="w-full p-5">
-      <Helmet>Focus Academy | My classes</Helmet>
-      <h1 className="text-5xl font-bold text-center py-10">My Classes</h1>
+     <Helmet>
+        <title>Focus Academy | Instructor Classes</title>
+      </Helmet>
+      <h1 className="text-5xl font-bold text-center py-10">Instructor Classes</h1>
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}

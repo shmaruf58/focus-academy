@@ -10,7 +10,7 @@ const useInsta = () => {
     enabled: !loading,
     queryFn: async () => {
       const res = await axiosSecure.get(`/users/insta/${user?.email}`);
-      console.log("is insta response", res);
+      //console.log("is insta response", res);
       return res.data.insta;
     },
   });
