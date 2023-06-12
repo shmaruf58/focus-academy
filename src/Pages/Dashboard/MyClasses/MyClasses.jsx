@@ -74,7 +74,6 @@ const MyClasses = () => {
                 <td className="text">${item.price}</td>
 
                 <td>
-
                   <Link to={`/dashboard/payment?price=${item.price}`}>
                     <button className="btn btn-primary w-24">PAY</button>
                   </Link>
