@@ -1,8 +1,7 @@
 # b712-summer-camp-client-side-shmaruf58" 
 
 # Focus Academy Starter Repository
- Best Toy platform for get high quality and Unique Products
-
+Focus Academy: Mastering. The Art of Photography
 ## Live Link
 Hosted in Firebase-> [Focus Academy](https://focus-7ff5b.web.app/)
 
