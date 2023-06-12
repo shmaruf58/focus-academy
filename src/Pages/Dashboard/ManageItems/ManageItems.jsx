@@ -82,9 +82,7 @@ const ManageItems = () => {
                 <td>${item.price}</td>
 
                 <td>
-                  <h1 className=" font-semibold">
-                    Approved
-                  </h1>
+                  <h1 className=" font-semibold">Approved</h1>
                 </td>
 
                 <td>
@@ -111,9 +109,7 @@ const ManageItems = () => {
                     Send FeedBack
                   </button>
                 </td>
-
-
-              </tr> 
+              </tr>
             ))}
           </tbody>
         </table>
