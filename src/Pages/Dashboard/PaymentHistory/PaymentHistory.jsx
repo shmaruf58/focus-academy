@@ -1,9 +1,6 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { Helmet } from "react-helmet-async";
-
 
 const PaymentHistory = () => {
   const [services, setService] = useState([]);
@@ -17,10 +14,10 @@ const PaymentHistory = () => {
 
   return (
     <div className="w-full px-10">
-         <Helmet>
-          <title>Focus Academy | Payment History</title>
+      <Helmet>
+        <title>Focus Academy | Payment History</title>
       </Helmet>
-    <h1 className="text-4xl font-bold text-center py-5 ">Payment History</h1>
+      <h1 className="text-4xl font-bold text-center py-5 ">Payment History</h1>
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}
