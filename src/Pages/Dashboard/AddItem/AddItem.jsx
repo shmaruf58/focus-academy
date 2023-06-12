@@ -6,9 +6,6 @@ import Swal from "sweetalert2";
 import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { Helmet } from "react-helmet-async";
 
-//
-//
-
 const img_hosting_token = import.meta.env.VITE_Image_Upload_token;
 
 const AddItem = () => {
@@ -29,8 +26,8 @@ const AddItem = () => {
       .then((imgResponse) => {
         if (imgResponse.success) {
           const imgURL = imgResponse.data.display_url;
-         
-          const { name, price, instructor, availabe_seats,  email } = data;
+
+          const { name, price, instructor, availabe_seats, email } = data;
           const newItem = {
             name,
             price: parseFloat(price),
