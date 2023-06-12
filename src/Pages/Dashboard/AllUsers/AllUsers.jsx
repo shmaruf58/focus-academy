@@ -20,7 +20,6 @@ const AllUsers = () => {
       .then((data) => {
         console.log(data);
         if (data.modifiedCount) {
-          
           refetch();
 
           Swal.fire({
